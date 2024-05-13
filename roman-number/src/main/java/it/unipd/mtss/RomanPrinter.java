@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class RomanPrinter {
 
-  public static String print(int num) /*throws ZeroException, NegativeNumberException,
-   BiggerThan4000Exception, NotRomanLetterException*/ {
+  public static String print(int num) throws ZeroException, NegativeNumberException,
+   BiggerThan1000Exception, NotRomanLetterException {
   return printAsciiArt(IntegerToRoman.convert(num));
   }
 
-  private static String printAsciiArt(String romanNumber) /*throws NotRomanLetterException*/{
+  private static String printAsciiArt(String romanNumber) throws NotRomanLetterException {
 
 
     String[] I ={
