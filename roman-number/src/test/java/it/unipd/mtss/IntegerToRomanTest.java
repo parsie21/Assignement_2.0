@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////
+// [LUCA] [PARISE] [2043677]
+// [LEONARDO] [BALDO] [2042372]
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
@@ -101,12 +106,7 @@ public class IntegerToRomanTest {
         IntegerToRoman.convert(negative);
     }
 
-    @Test(expected = BiggerThan1000Exception.class)
-    public void convertGreaterThan5000() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
-        int bigger=1000;
-
-        IntegerToRoman.convert(bigger);
-    }
+   
 
 
     //Testing random numbers

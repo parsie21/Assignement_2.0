@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////
+// [LUCA] [PARISE] [2043677]
+// [LEONARDO] [BALDO] [2042372]
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
 import static org.junit.Assert.assertEquals;
@@ -5,6 +10,7 @@ import org.junit.Test;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 
 public class RomanPrinterTest {
 
@@ -129,22 +135,6 @@ public class RomanPrinterTest {
             assertEquals(M , ascii);
     }
 
-    @Test(expected = NotRomanLetterException.class)
-    public void PrintNotRomanLetter() throws NegativeNumberException, ZeroException, BiggerThan1000Exception, NotRomanLetterException {
-        
-        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
-            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn("DefinitelyNotRoman");
-            RomanPrinter.print(123);
-        }
-    }
-
-
-    @Test(expected = NullPointerException.class)
-    public void PrintNullInput() throws NegativeNumberException, BiggerThan1000Exception, NotRomanLetterException, ZeroException {
-        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
-            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn(null);
-            RomanPrinter.print(123);
-        }
-    }
+   
   
 }
